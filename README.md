@@ -140,7 +140,8 @@ axbrew install ~/LocalPath/openssl@1.0.rb
 echo $(axbrew --prefix openssl@1.0)
 /usr/local/homebrew/opt/openssl@1.0
 ```
-
+- Instalar command line tols for xCode 
+https://developer.apple.com/download/all/
 ```
 axbrew install readline
 echo $(axbrew --prefix readline)
