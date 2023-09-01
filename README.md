@@ -195,7 +195,7 @@ echo $(axbrew --prefix libpq)
 ```
 
 ```
-ARCHFLAGS="-arch x86_64" gem install pg -v 0.17.0 -- --with-pg-config=/usr/local/homebrew/opt/postgresql@10/bin/pg_config --with-pq-dir="/usr/local/homebrew/opt/libpq"
+ARCHFLAGS="-arch x86_64" sudo gem install pg -v 0.17.0 -- --with-pg-config=/usr/local/homebrew/opt/postgresql@10/bin/pg_config --with-pq-dir="/usr/local/homebrew/opt/libpq"
 ```
 
 ```
