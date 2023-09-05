@@ -220,6 +220,8 @@ gem install therubyracer -v '0.12.2' -- --with-v8-dir=/usr/local/homebrew/opt/v8
 Um workaround para este problema foi comentar o therubyracer no Gemfile do projeto.
 
 Adicionando node no projeto com nvm, resolvemos o problema do projeto ficar sem JavascriptRuntime
+
+referencia -> https://www.rubyonmac.dev/how-to-install-therubyracer-on-m1-m2-apple-silicon-mac
 ```
 axbrew install nvm
 ```
