@@ -29,6 +29,11 @@ export PATH="/usr/local/homebrew/opt/postgresql@10/bin:$PATH"
 - instalar brew compativel com a versao x86
 link de referencia =>
 https://medium.com/mkdir-awesome/how-to-install-x86-64-homebrew-packages-on-apple-m1-macbook-54ba295230f
+------
+## Openssl Setup
+PS: Tentar instalar a versão mais antiga do openssl conforme tutorial abaixo, 
+    caso não de certo, pode seguir com o resto do setup por que ao instalar o postgresql@10,
+    ele por default já instala o openssl@3.0.
 
 - Instalar openssl@1.0 via axbrew
 link de referencia => https://www.davidseek.com/ruby-on-m1/
@@ -140,6 +145,7 @@ axbrew install ~/LocalPath/openssl@1.0.rb
 echo $(axbrew --prefix openssl@1.0)
 /usr/local/homebrew/opt/openssl@1.0
 ```
+---
 - Instalar command line tols for xCode 
 https://developer.apple.com/download/all/
 ```
@@ -154,12 +160,15 @@ axbrew install libyaml
 axbrew install gmp
 axbrew install zlib
 ```
-- Instalar versao antiga do ruby
-
+- Instalar versao antiga do ruby 💎
+  
+  PS: caso não tenha conseguido instalar o opessl@1.0, não precisa passar a flag ```RUBY_CONFIGURE_OPTS='--with-openssl-dir=/usr/local/homebrew/opt/openssl@1.0'```
 ```
 RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/homebrew/opt/readline' RUBY_CONFIGURE_OPTS='--with-openssl-dir=/usr/local/homebrew/opt/openssl@1.0' arch -x86_64 rbenv install 2.1.3
 ```
-
+```
+axbrew install rbenv
+```
 ```
 rbenv global 2.1.3
 ```
@@ -169,7 +178,8 @@ rbenv global 2.1.3
 ```
 gem install bundler -v 1.13.0
 ```
-
+-----
+## Postgresql 🐘
 ```
 axbrew install postgresql@10
 ```
@@ -185,7 +195,6 @@ axbrew services list
 ```
 axbrew services start postgresql@10
 ```
-
 ```
 axbrew install libpq
 ```
@@ -197,15 +206,25 @@ echo $(axbrew --prefix libpq)
 ```
 ARCHFLAGS="-arch x86_64" sudo gem install pg -v 0.17.0 -- --with-pg-config=/usr/local/homebrew/opt/postgresql@10/bin/pg_config --with-pq-dir="/usr/local/homebrew/opt/libpq"
 ```
-
+----
+## Rubyracer
 ```
 axbrew install v8-315
 ```
-
 ```
 gem install therubyracer -v '0.12.2' -- --with-v8-dir=/usr/local/homebrew/opt/v8@3.15
 ```
-The End!
+- A gem therubyracer adiciona um JavascriptRuntime ao projeto rails, que é utilizado principalmente para fazer a pré-compilação de assets.
+  porém atualmente ela depende da lib v8 para funcionar, porém a instalacao dela foi descontinuada por que ela depende do pyton 2.
+
+Um workaround para este problema foi comentar o therubyracer no Gemfile do projeto.
+
+Adicionando node no projeto com nvm, resolvemos o problema do projeto ficar sem JavascriptRuntime
+```
+axbrew install nvm
+```
+----
+The End! 👏👏👏
 
 
 
