@@ -1,4 +1,4 @@
-# macm1-setup
+# mac Arm setup
 
 - adicionar código abaixo ao .zshrc
 
