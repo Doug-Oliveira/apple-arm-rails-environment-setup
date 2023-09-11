@@ -224,6 +224,10 @@ Adicionando node no projeto com nvm, resolvemos o problema do projeto ficar sem 
 referencia -> https://www.rubyonmac.dev/how-to-install-therubyracer-on-m1-m2-apple-silicon-mac
 ```
 axbrew install nvm
+nvm install version
+```
+```
+npm install
 ```
 ----
 The End! 👏👏👏
