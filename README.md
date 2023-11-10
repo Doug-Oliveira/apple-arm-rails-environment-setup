@@ -164,6 +164,7 @@ axbrew install zlib
   
   PS: caso não tenha conseguido instalar o opessl@1.0, não precisa passar a flag ```RUBY_CONFIGURE_OPTS='--with-openssl-dir=/usr/local/homebrew/opt/openssl@1.0'```
 ```
+CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS='--with-openssl-dir=/usr/local/homebrew/opt/openssl@3 --with-readline-dir=/usr/local/homebrew/opt/readline/' arch -x86_64 rbenv install 3.1.2 # utilizar este
 RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/homebrew/opt/readline' RUBY_CONFIGURE_OPTS='--with-openssl-dir=/usr/local/homebrew/opt/openssl@1.0' arch -x86_64 rbenv install 2.1.3
 ```
 ```
