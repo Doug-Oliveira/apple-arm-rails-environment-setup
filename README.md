@@ -30,6 +30,10 @@ export PATH="/usr/local/homebrew/opt/postgresql@10/bin:$PATH"
 link de referencia =>
 https://medium.com/mkdir-awesome/how-to-install-x86-64-homebrew-packages-on-apple-m1-macbook-54ba295230f
 ------
+## Rbenv install
+```
+axbrew install rbenv
+```
 ## Openssl Setup
 
 - Install openssl@1.0 via brew
@@ -60,9 +64,6 @@ axbrew install zlib
 ```
 - Install Ruby 💎
   
-```
-axbrew install rbenv
-```
 ```
 rbenv global 2.1.3
 ```
