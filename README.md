@@ -77,6 +77,11 @@ RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--wi
 gem install bundler -v 1.13.0
 ```
 -----
+## Install Redis
+```
+axbrew install redis
+axbrew services start redis
+```
 ## Postgresql 🐘
 ```
 axbrew install postgresql@10
