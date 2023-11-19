@@ -52,6 +52,7 @@ echo $(axbrew --prefix openssl@1.0)
 https://developer.apple.com/download/all/
 ```
 axbrew install readline
+# check installation
 echo $(axbrew --prefix readline)
 /usr/local/homebrew/opt/readline
 ```
@@ -65,14 +66,13 @@ axbrew install zlib
 - Install Ruby 💎
   
 ```
-rbenv global 2.1.3
-```
-```
 RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(axbrew --prefix openssl@1.0)" arch -x86_64 rbenv install 2.1.3
+```
+```
+rbenv global 2.1.3
 ```
 
 - Check bundler version of the project.
-
 ```
 gem install bundler -v 1.13.0
 ```
