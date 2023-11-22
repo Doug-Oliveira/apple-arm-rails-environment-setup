@@ -40,7 +40,7 @@ axbrew install rbenv
 
 ```
 axbrew install rbenv/tap/openssl@1.0
-rbenv rehashq
+rbenv rehash
 ```
 - Check installation
 ```
